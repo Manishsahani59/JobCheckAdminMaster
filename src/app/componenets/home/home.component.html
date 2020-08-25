@@ -1,0 +1,123 @@
+<nav class="navbar fixed-top navbar-expand-md mb-3 header">
+    <div class="flex-row d-flex">
+        <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas"
+            title="Toggle responsive left sidebar">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template"><img
+                src="../../../assets/jobcheck-logo.png"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+    </button>
+    <div class="navbar-collapse collapse" id="collapsingNavbar">
+  
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">sub-menu 1</a>
+                    <a class="dropdown-item" href="#">sub-menu 2</a>
+                    <!-- <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a> -->
+                </div>
+            </li>
+  
+            <li class="nav-item">
+                <a class="nav-link" href="#myAlert" data-toggle="collapse">Social Authentication</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#myAlert" data-toggle="collapse">Carrer Directory</a>
+            </li>
+            <div class="row d-flex">
+                <li class="nav-item">
+                    <button class="btn btn-subscribe ml-3">subscribe</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <span class="badge badge-light bg-success" style="transform: translateY(-8px);">4</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><img src="../assets/img_avatar.png" alt="Avatar" class="avatar"> </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+  </nav>
+  <div class="container-fluid" id="main">
+    <div class="row h-100 row-offcanvas row-offcanvas-left">
+        <div style="min-height: 600px;" class="col-md-3 col-lg-1 sidebar-offcanvas  bg-light pl-0 sidenavbar" id="sidebar" role="navigation">
+            <ul class="nav sticky-top flex-column pl-0 pt-1 mt-4">
+                <!-- sticky-top -->
+                <h4 class="text-center" style="color: #2a2a2a;letter-spacing: .5px;font-weight: 600;">Tools</h4>
+                <div class="container">
+  
+  
+                  <div class="row d-flex justify-content-center">
+                      <div class="col-lg-12 text-center Tools">
+                          <img src='../../../assets/Action Button/Salary-in-trend.png'>
+                          <p>Salary Trand</p> 
+                      </div>
+                 </div>
+              
+                 <div class="row d-flex justify-content-center">
+                  <div class="col-lg-12 text-center Tools">
+                      <img src='../../../assets/Action Button/career-navigation.png'>
+                      <p>Career Navigation</p> 
+                  </div>
+             </div>
+          
+  
+  
+             <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 text-center Tools">
+                  <img src='../../../assets//Action Button/talent-migration.png'>
+                  <p>Talent Migration</p> 
+              </div>
+         </div>
+      
+  
+  
+         <div class="row d-flex justify-content-center">
+          <div class="col-lg-12 text-center Tools">
+              <img src='../../../assets//Action Button/salary-predicition.png'>
+              <p>Salary Predication</p> 
+          </div>
+        </div>
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-12 text-center Tools">
+              <img src='../../../assets//Action Button/FAQ.png'>
+              <p>FAQs & Knowledge Base</p> 
+          </div>
+        </div>
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-12 text-center Tools">
+              <img src='../../../assets//Action Button/chat-support.png'>
+              <p>Chat Support</p> 
+          </div>
+        </div>
+  
+  
+              
+                </div>
+            </ul>
+        </div>
+        <!--/col-->
+        <div class="col main pt-5 mt-3">
+             <router-outlet></router-outlet>  
+        </div>
+        <!--/main col-->
+    </div>
+  </div>
+  <!--/.container-->

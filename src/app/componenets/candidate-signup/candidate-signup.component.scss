@@ -1,0 +1,61 @@
+button:focus{
+    outline: none;
+    box-shadow: none;
+}
+.topnav {
+    overflow: hidden;
+    background-color:#ffff;
+  }
+input[type=text],input[type=password]{
+    background-color: #dcebee;
+    
+}
+
+input[type=text]::placeholder,input[type=password]::placeholder{
+    text-align: center;
+} 
+
+input:focus{
+    box-shadow: none;
+}  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 0px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: all 1s ease;
+    border-width: 0px;
+  }
+  
+  .topnav a:hover {
+    color: #1489b5;
+    border-bottom: 1px solid #1489b5;
+  }
+  
+  .topnav a.active {
+    color: #1489b5;
+    border-width: 80%;
+    border-bottom: 2px solid #1489b5;
+  }
+  
+  .socalLogin .Groupbtn{
+    width: 200px;
+    height: 50px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    }
+
+    .jobwaiting{
+        img{
+            width: 100%;
+           height: auto;
+        }
+    }

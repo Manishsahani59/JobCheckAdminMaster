@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="61" viewBox="0 0 330 61">
+  <g id="Group_29" data-name="Group 29" transform="translate(-0.454)">
+    <rect id="Rectangle_39" data-name="Rectangle 39" width="330" height="61" transform="translate(0.454)" fill="#db4e3d"/>
+    <rect id="Rectangle_42" data-name="Rectangle 42" width="61" height="61" transform="translate(0.454)" fill="#9e291b"/>
+    <g id="Google_plus_Icon_Icon" data-name="Google plus Icon Icon" transform="translate(17.827 20.61)">
+      <g id="Group_28" data-name="Group 28" transform="translate(0 0)">
+        <g id="Group_27" data-name="Group 27">
+          <g id="Group_25" data-name="Group 25">
+            <path id="Path_11" data-name="Path 11" d="M23.482,38.538,26.5,35.46a11.364,11.364,0,0,0-9.587-2.03,9.259,9.259,0,0,0-7.783,8.047c-.48,2.915.071,6.786,2.419,9.327,1.709,1.848,3.794,3.243,8.222,3.243,4.635,0,10.063-3.824,9.746-12.458H19.323v4.064H25.13a5.324,5.324,0,0,1-4.918,4.094c-2.638.159-6.158-.7-6.857-4.918-.517-3.131.72-6.746,4.527-7.317S23.482,38.538,23.482,38.538Z" transform="translate(-8.97 -33.149)" fill="#fff"/>
+          </g>
+          <g id="Group_26" data-name="Group 26" transform="translate(22.913 4.8)">
+            <path id="Path_12" data-name="Path 12" d="M86.992,51.1h-3.74V47.36H80.539V51.1H76.8v2.716h3.739v3.736h2.713V53.812h3.74Z" transform="translate(-76.8 -47.36)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="Login_with_Google" data-name="Login with Google" transform="translate(96.454 38)" fill="#fff" font-size="21" font-family="PTSans-Regular, PT Sans"><tspan x="0" y="0">Login with Google</tspan></text>
+  </g>
+</svg>

@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+button:focus{
+    outline: none;
+}mat-label{
+    font-size: 13px;
+    letter-spacing: 1px;
+    
+}
+.btn .icon{
+    font-size: 16px;
+}

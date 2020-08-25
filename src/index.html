@@ -6,6 +6,52 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+
+  <script>
+    $(document).ready(function() {
+      $('[data-toggle=offcanvas]').click(function() {
+        $('.row-offcanvas').toggleClass('active');
+      });
+    });
+
+   $(document).ready(function(){
+    $('.topnav a').click(function(){
+     $(this).addClass('active');
+    });
+   });
+
+  </script>
+ 
+ 
+<script type="text/javascript">
+  window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer", {
+    theme: "light2", // "light2", "dark1", "dark2"
+    animationEnabled: true, // change to true		
+    title:{
+      //text: "Basic Column Chart"
+    },
+    data: [
+    {
+      // Change type to "bar", "area", "spline", "pie",etc.
+      type: "column",
+      dataPoints: [
+        { label: "",  y: 10  },
+        { label: "", y: 15  },
+        { label: "", y: 25  },
+        { label: "",  y: 30  },
+        { label: "",  y: 28  }
+      ]
+    }
+    ]
+  });
+  chart.render();
+  }
+  </script>
 </head>
 <body>
   <app-root></app-root>

@@ -1,0 +1,153 @@
+<div class='row' style="margin-top: 40px;">
+    <div class="col-lg-12 d-flex justify-content-end">
+        <button mat-raised-button color="primary" class='btn_add' data-toggle="modal"
+            data-target="#AddDepartmentModel">Add
+            Department</button>
+    </div>
+</div>
+<div class="row h-100">
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <br>
+            <table class="table display" id="datatable" >
+                <thead>
+                    <tr>
+                        <th>Sr.No.</th>
+                        <th>Department Name</th>
+                        <th>Department Code</th>
+                        <th>CreatedBy</th>
+                        <th>CreatedOn</th>
+                        <th>UpdatedBy</th>
+                        <th>UpdatedOn</th>
+                        <th>IsActive</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let Department of Departmentlist; index as i">
+                        <td>{{i+1}}</td>
+                        <td>{{Department.departmentName}}</td>
+                        <td>{{Department.departmentCode}}</td>
+                        <td>{{Department.createdBy}}</td>
+                        <td>{{Department.createdOn}}</td>
+                        <td>{{Department.updatedBy}}</td>
+                        <td>{{Department.updatedOn}}</td>
+                        <td>{{Department.isActive}}</td>
+                        <td class="d-flex"> <button mat-icon-button (click)="DeleteDepartment(Department)" class="btn"
+                                color="primary" aria-label="icon-button">
+                                <i class="fa fa-trash-o icon" aria-hidden="true"></i>
+                            </button>
+                            <button mat-icon-button class="btn " data-toggle="modal" data-target="#updateDepartment"
+                              (click)="openModal(editDepartment,Department)"   color="accent" aria-label="icon-button">
+                                <i class="fa fa-pencil icon" aria-hidden="true"></i>
+                            </button></td>
+                    </tr>
+                    <!-- (click)="open(updateDepartment, Department)" -->
+                </tbody>
+            </table>
+        </div>
+        <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+
+        <img *ngIf="isLoading" src="../../../assets/Spin-1s-200px.gif" class='img mx-auto d-block'>
+    </div>
+</div>
+
+
+<!--   **********************************************    Start Add Departmet Modal  ********************************************** -->
+<div class="modal fade" id="AddDepartmentModel" tabindex="-1" role="dialog" aria-labelledby="AddDepartmentModel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form [formGroup]="DepartmentDetails" (ngSubmit)="AddDepartment()">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title" id="AddDepartmentModel">Add Department</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <mat-form-field class="col-md-6" appearance="fill">
+                                            <mat-label>Department Name</mat-label>
+                                            <input matInput autocomplete="off" formControlName="DepartmentName">
+                                            <mat-error *ngIf="hasError('DepartmentName', 'required')"><span
+                                                    style="color: red;" class="error"></span>Plaese enter the Deparement
+                                                Name</mat-error>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="col-md-6" appearance="fill">
+                                            <mat-label>Department Code</mat-label>
+                                            <input matInput placeholder="" formControlName="DepartmentCode">
+                                            <mat-error *ngIf="hasError('DepartmentCode', 'required')"><span
+                                                    style="color: red;" class="error"></span>Plaese enter the Deparement
+                                                Code</mat-error>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" mat-raised-button color="accent" data-dismiss="modal"
+                        style='margin-right: 10px;'>Cancel</button>
+                    <button type="submit" mat-raised-button color="primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--   **********************************************    End Add Department Modal  ********************************************** -->
+
+
+<!--   **********************************************    start update Department Modal  ********************************************** -->
+<ng-template #editDepartment let-modal>
+    <div class="modal-body py-0">
+     <form [formGroup]="updateDepartmentDetails" (ngSubmit)="ModefyDepartment()">
+        <div class="modal-header bg-light">
+            <h4 class="modal-title">Update Department</h4>
+            <button type="button" (click)="modal.dismiss()" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <mat-form-field class="col-md-6" appearance="fill">
+                          <mat-label>Department Name</mat-label>
+                          <input matInput [(value)]="updateDepartment.departmentName">
+                          <mat-error *ngIf="updatehasError('Departmentname', 'required')"><span style="color: red;"
+                            class="error"></span>Plaese enter the Deparement Name</mat-error>
+                         </mat-form-field>
+                        <mat-form-field class="col-md-6" appearance="fill">
+                          <mat-label>Department Code</mat-label>
+                          <input matInput [(value)]="updateDepartment.departmentCode">
+                          <mat-error *ngIf="updatehasError('Departmentcode', 'required')"><span style="color: red;"
+                            class="error"></span>Plaese enter the Deparement Code</mat-error>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer ">
+            <button type="button" mat-raised-button color="accent" (click)="modal.dismiss()" data-dismiss="modal" style='margin-right: 10px;'>Cancel</button>
+            <button type="submit" mat-raised-button color="primary">Save</button>
+          </div>
+     </form>
+    </div>
+   </ng-template>
+   <!--   **********************************************    End update Department Modal  ********************************************** -->
