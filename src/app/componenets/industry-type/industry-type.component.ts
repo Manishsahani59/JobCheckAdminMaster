@@ -3,7 +3,9 @@ import {IndustryTypeService} from '../../services/IndustryTypeServices/industry-
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import {IndustryType} from '../../models/IndustryTypeModel/IndustryType'
 import { HttpServiceService } from '../../services/HttpService/http-service.service'
-import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+//import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+
+import {ConfDialogComponent, ConfirmDialogModel} from '../SharedComponent/conf-dialog/conf-dialog.component'
 import { MatDialog } from "@angular/material/dialog";
 @Component({
   selector: 'app-industry-type',

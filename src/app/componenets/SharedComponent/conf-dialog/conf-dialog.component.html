@@ -1,0 +1,14 @@
+<div class="Confirm_Dialog_container" FxFlex=60>
+    <div mat-dialog-content>
+          <h4 class="title text-danger">{{Title}}</h4>
+          <p class='msg'>{{Message}}</p>
+    </div>
+     <div mat-dialog-actions class='d-flex justify-content-end'>
+      <button mat-raised-button (click)="onDismiss()">Cancel</button>
+      <button mat-raised-button color="warn" style="margin-left: 10px;" (click)="onConfirm()">Delete</button>
+      <!-- <a  (click)="onConfirm()" style=" color: black;opacity: .6;" (click)="onDismiss()">cancel</a>
+      <a   (click)="onConfirm()" style=" color: #4285F4;margin-left: 10px;">Delete</a> -->
+    </div>
+  </div> 
+  
+  

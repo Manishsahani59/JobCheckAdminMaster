@@ -3,7 +3,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {QualificationType, UpdatedeleteQualificationType} from '../../models/QualificationTypeModel/QualificationTypeModel'
 import {QualificationTypeService} from '../../services/QualificationType/qualification-type.service'
 import {HttpServiceService} from '../../services/HttpService/http-service.service'
-import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+//import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+
+import {ConfDialogComponent, ConfirmDialogModel} from '../SharedComponent/conf-dialog/conf-dialog.component'
 import {MatDialog} from '@angular/material/dialog'
 @Component({
   selector: 'app-qualification-type',

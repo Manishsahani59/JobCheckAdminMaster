@@ -10,7 +10,8 @@
   <!-- JS, Popper.js, and jQuery -->
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
   <script>
     $(document).ready(function() {
       $('[data-toggle=offcanvas]').click(function() {
@@ -23,6 +24,14 @@
      $(this).addClass('active');
     });
    });
+
+   $(document).ready( function () {
+      $('#datatable').DataTable({
+        buttons: [
+        'copy', 'excel', 'pdf'
+    ]
+      });
+  });
 
   </script>
  

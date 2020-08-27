@@ -55,7 +55,7 @@
   
   
   <!--   **********************************************    Start Add Location Modal  ********************************************** -->
-  <!-- <div class="modal fade" id="AddLocationModel" tabindex="-1" role="dialog" aria-labelledby="AddLocationModel"
+  <div class="modal fade" id="AddLocationModel" tabindex="-1" role="dialog" aria-labelledby="AddLocationModel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <form [formGroup]="LocationDetails" (ngSubmit)="InsertLocation()">
@@ -74,21 +74,21 @@
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <mat-form-field appearance="fill" class="col-md-6">
-                        <mat-label>Choose DistrictId</mat-label>
-                        <mat-select [(value)]="Ids" formControlName="DistrictId">
-                          <mat-option value="{{Ids}}" *ngFor="let Ids of DistId">{{Ids}}</mat-option>
+                        <mat-label>Choose District Name</mat-label>
+                        <mat-select  formControlName="DistrictId">
+                          <mat-option >Maharastra</mat-option>
                         </mat-select>
                         <mat-error *ngIf="hasError('DistrictId', 'required')"><span style="color: red;"
-                            class="error"></span>Select the District Id</mat-error>
+                            class="error"></span>Select the District Name</mat-error>
                       </mat-form-field>
   
                       <mat-form-field appearance="fill" class="col-md-6">
-                        <mat-label>Choose StateId</mat-label>
-                        <mat-select [(value)]="Ids" formControlName="StateId">
-                          <mat-option value="{{Ids}}" *ngFor="let Ids of DistId">{{Ids}}</mat-option>
+                        <mat-label>Choose State Name</mat-label>
+                        <mat-select formControlName="StateId">
+                          <mat-option>Mumbai</mat-option>
                         </mat-select>
                         <mat-error *ngIf="hasError('StateId', 'required')"><span style="color: red;"
-                            class="error"></span>Select the state Id</mat-error>
+                            class="error"></span>Select the state Name</mat-error>
                       </mat-form-field>
                     </div>
                   </div>
@@ -122,6 +122,6 @@
         </div>
       </form>
     </div>
-  </div> -->
+  </div>
   <!--   **********************************************    End Add Location Modal  ********************************************** -->
   

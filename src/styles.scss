@@ -2,11 +2,28 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 button:focus{
     outline: none;
-}mat-label{
+}
+body div.cdk-overlay-container {
+    z-index: 99999;
+  }
+mat-label{
     font-size: 13px;
     letter-spacing: 1px;
     
 }
 .btn .icon{
     font-size: 16px;
+}
+.dataTables_wrapper .dataTables_filter input{
+    margin-left: 0.5em;
+    outline: none;
+}
+table thead{
+    background: #DCDCDC;
+}
+table tbody tr td{
+    font-size: 15px;
+    font-weight: 450;
+    letter-spacing: 1px;
+
 }

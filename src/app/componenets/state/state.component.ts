@@ -5,7 +5,8 @@ import {HttpServiceService } from '../../services/HttpService/http-service.servi
 import {state, updateDeleteState} from '../../models/stateModel/state'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {MatDialog} from '@angular/material/dialog'
-import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+//import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+import {ConfDialogComponent, ConfirmDialogModel} from '../SharedComponent/conf-dialog/conf-dialog.component'
 @Component({
   selector: 'app-state',
   templateUrl: './state.component.html',

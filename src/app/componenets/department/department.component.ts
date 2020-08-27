@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ConfDialogComponent,ConfirmDialogModel } from '../conf-dialog/conf-dialog.component';
+// import { ConfDialogComponent,ConfirmDialogModel } from '../conf-dialog/conf-dialog.component';
+
+import {ConfDialogComponent, ConfirmDialogModel} from '../SharedComponent/conf-dialog/conf-dialog.component'
 import {MatDialog} from '@angular/material/dialog'
 import { FormGroup, Validators, FormControl,FormBuilder } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
@@ -8,6 +10,7 @@ import {DepartmentService} from '../../services/DepartmentServices/department.se
 import {HttpServiceService} from '../../services/HttpService/http-service.service'
 import {Department,UpdateDeleteDepartment} from '../../models/DepartmentModel/Department'
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import $ from 'jquery'
 @Component({
   selector: 'app-department',
   templateUrl: './department.component.html',
@@ -45,6 +48,8 @@ export class DepartmentComponent implements OnInit {
       Departmentcode: new FormControl('', [Validators.required]),
     });
  
+    
+
     this.GetDepartmentlist();
   
   }

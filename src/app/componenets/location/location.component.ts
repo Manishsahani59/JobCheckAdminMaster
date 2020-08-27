@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {LocationService  } from '../../services/LocationServices/location.service';
 import { HttpServiceService } from '../../services/HttpService/http-service.service';
-import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+// import { ConfirmDialogModel,ConfDialogComponent } from '../conf-dialog/conf-dialog.component';
+import {ConfDialogComponent, ConfirmDialogModel} from '../SharedComponent/conf-dialog/conf-dialog.component'
 import {MatDialog} from '@angular/material/dialog' 
 import {AddlLocation,UpdateDeleteLocation} from '../../models/LocationModel/Location'
 
